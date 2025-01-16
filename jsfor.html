@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+#some_div { border:1px solid red;}
+#some_span { border:1px solid blue;}
+</style>
+</head>
+
+<body>
+
+<div id="forDiv"></div>
+
+<div id="forDiv2"></div>
+
+<script>
+//console.time();
+		for(i=0;i<100;i++)     {
+
+//document.querySelector("#forDiv").innerHTML=document.querySelector("#forDiv").innerHTML+i;
+document.querySelector("#forDiv").innerHTML+=i;
+}
+//console.timeEnd();
+//console.time();
+	div2 = document.querySelector("#forDiv2");	
+    
+    for(i=0;i<100;i++)     {
+
+		div2.innerHTML=div2.innerHTML+i;
+        
+	}
+//console.timeEnd();
+</script>
+</body>
+</html>
